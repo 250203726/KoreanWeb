@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+.chartsbox{
+	padding-top:47px;
+	text-align:center;
+}
+.charttitle{
+	font-size:30px;
+	font-weight: 500;
+	color:white;
+	background-color:#e67e22;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	
+}
+.charttitle b{
+	color:red;
+	font-size:30px;	
+}
+.chartstyle{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin:10px 0px;
+	padding:5px;
+	width:49.2%;
+	display: inline-table;
+	text-align:left;
+}
+.choose{
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;
+	padding-left:4px;
+}
+.choose span{
+	font-size:20px;
+	color:#235894;
+	font-weight:bold;
+	padding-right:5px;
+}
+.choose select{
+	height:30px;
+	width:150px;
+	color:#235894;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+}

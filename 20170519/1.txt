@@ -1,0 +1,26 @@
+if 
+y=200 
+ if(x in paddle)
+	game over
+ else 
+	con;
+
+
+paddleX-paddleWidth/2 paddleX+paddleWidth/2
+
+
+
+wallX,
+wallHieght
+wallWidth
+canvasHeight
+
+
+
+if (ballX==wallX)
+	if(ballY<canvas-wallhieght)
+		pass;
+	else 
+		no pass;
+	
+	

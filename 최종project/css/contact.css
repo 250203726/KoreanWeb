@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color:#4F6890;}
+footer{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+}
+.contactbody{
+	text-align:center;
+}
+.contacttitle span{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:20px;
+}
+.contactbox{
+	margin-top:57px;
+	margin-bottom:10px;
+	background-color:#FFF;
+	padding:10px 20px;
+}
+.row1 input[type="text"] {
+  padding: 5px;
+  font-size: 0.85em;
+  margin: 10px 0;
+  border: 1px solid #E0E0E0;
+  color: #6F6F6F;
+  background: #f0efef;
+  float: left;
+  outline: none;
+  font-weight: 300;
+  border-radius: 3px;
+  width: 48.5%;
+}
+.row2 textarea {
+	width:100%;
+	font-size:0.85em;
+	margin: 10px 0;
+	border: 1px solid #E0E0E0;
+	color: #6F6F6F;
+	outline: none;
+	background:#f0efef;
+	height:200px;
+	padding: 10px;
+	resize: none;
+	border-radius: 3px;
+}

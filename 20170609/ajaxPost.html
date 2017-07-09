@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+var http=new XMLHttpRequest();
+var params="name=Leo&hobby=play baketball";
+http.open("POST","http://203.255.71.173:8080/webclass/post.php",true);
+http.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+http.onreadystatechange=function(){
+	if(http.readyState==4&& http.status==200){
+		alert(http.responseText);
+	}
+};
+http.send(params);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

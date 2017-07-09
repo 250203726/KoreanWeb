@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+.rankingbox{
+	padding-top:47px;
+	text-align:center;
+}
+.rankingtable{
+	width:100%;
+	margin:10px 0px;
+	overflow:hidden;
+	border-radius:10px;
+	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.rankingtable thead tr td{
+	background-color:#e67e22;
+	color:#FFF;
+	font-weight:600;
+	font-size:18px;
+	vertical-align:middle;
+	height:50px;
+}
+.rankingtable tbody tr td{
+	background-color:#FFF;
+	color:#4F6890;
+	text-align:center;
+	vertical-align:middle;
+	font-size:18px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+.table-hover tbody tr:hover,.table-hover tbody tr:visited,.table-hover tbody tr:hover td,.table-hover tbody tr:visited td{
+	background-color:#e67e22;
+	color:#FFF;
+}

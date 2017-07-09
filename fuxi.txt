@@ -1,0 +1,89 @@
+body 
+p
+pre
+h1~h6
+img
+b
+i
+strong
+em
+code
+sup
+sub
+
+hr
+
+&nbsp;
+&lt;
+&gt;
+&quot;
+&amp;
+
+ul ol
+li
+
+dl
+dt dd
+
+a
+target _blank _self _parent _top framename
+id
+
+img
+src width height border alt
+
+table
+tr td rowspan colspan caption
+
+audio 
+autoplay controls loop preload src volume
+
+video
+
+iframe
+
+div
+
+form method=get/post
+
+input
+type=
+	button
+	text
+	password
+	radio
+	checkbox
+	file
+	reset
+	image
+	hidden
+	submit
+	
+	date
+	datetime
+	datetime-local
+	month
+	time
+	week
+	color
+	email
+	tel
+	search
+	range
+	number
+	url
+autocomlete
+autofocus
+placeholder
+readonly
+required
+pattern
+
+button 
+
+textarea
+
+fieldset
+
+label
+

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+function getdata(){
+	xhttp.open("GET","http://203.255.71.173:8080/webclass/taskone.php",true);
+	xhttp.send();
+}
+var leo;
+var xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange=function(){
+	if(this.readyState==4&& this.status==200){
+		var ajaxstring=xhttp.responseText;
+		leo=JSON.parse(ajaxstring);
+		document.write("<table border=1><td>"+leo.name+"</td><td>"+leo.age+"</td><td>"+leo.city+"</td></table>");
+	}
+};
+</script>
+</head>
+
+<body>
+
+<input type="button" value="Get Data" onClick="getdata()" />
+
+
+</body>
+</html>

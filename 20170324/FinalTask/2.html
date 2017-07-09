@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<form action="">
+    <fieldset>
+    	<legend>Basic Information</legend>
+        FirstName:<input id="firstname" type="text" required/><br/>
+        LastName:<input id="lastname" type="text" required/><br/>
+        Birthday:<input id="birthday" type="date" required/><br/>
+        Gender<br/>
+        male<input type="radio" name="sex" value="1" required/>
+        female<input type="radio" name="sex" value="2" required/>
+    </fieldset>
+    
+    <fieldset>
+    	<legend>Extra Information</legend>
+        Email:<input id="email" type="email" placeholder="example@google.com" required/><br/>
+        PhoneNumber:<input id="tel" type="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" 
+         title="###-####-####"
+        /><br/>
+        Card Information<select name="card" required>
+        	<option value="visa" selected>Visa</option>
+            <option value="master">Master</option>
+            <option value="unionpay">UnionPay</option>
+        </select>
+    </fieldset>
+    <input type="submit" value="submit"/>
+    <input type="reset" value="reset" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+form{
+	border:red 5px solid;	
+}
+
+
+</style>
+<script type="application/javascript" language="javascript" >
+
+function validation(){
+	var assetBrand=document.forms["sub_form"]["assetBrand"].value;			
+	var assetinfoVersion=document.forms["sub_form"]["assetinfoVersion"].value;
+	var assetinfoPrice=document.forms["sub_form"]["assetinfoPrice"].value;
+	var agentPurchaser=document.forms["sub_form"]["agentPurchaser"].value;
+	var assetmadeTime=document.forms["sub_form"]["assetmadeTime"].value;
+	var assetinfoTime=document.forms["sub_form"]["assetinfoTime"].value;
+	var startUseTime=document.forms["sub_form"]["startUseTime"].value;
+	var assetfactoryId=document.forms["sub_form"]["assetfactoryId"].value;
+	var supplierEmail=document.forms["sub_form"]["supplierEmail"].value;
+	var projectId=document.forms["sub_form"]["projectId"].value;
+	
+	var message="";
+	if(assetBrand=="")
+		message+="Brand is requested!\n";
+	if(assetfactoryId=="")
+		message+="Factory is requested!\n";
+	if(assetinfoPrice=="")
+		message+="Price is requested!\n";
+	if(agentPurchaser=="")
+		message+="Purchaser is requested!\n";
+	if(assetmadeTime=="")
+		message+="madeDate is requested!\n";
+	if(projectId=="")
+		message+="project is requested!\n";
+	if(startUseTime=="")
+		message+="startUseDate is requested!\n";
+	
+	
+		
+		
+	if (isNaN(assetinfoVersion) || assetinfoVersion < 1 || assetinfoVersion > 10)
+		message+="Version is between 1 and 10!\n"
+	
+	var apos=supplierEmail.indexOf("@")
+	var dotpos=supplierEmail.lastIndexOf(".")
+	if (apos<1||dotpos-apos<2) 
+		message+="supplierEmail is not a valid address!\n"
+	
+	var date = new Date(); 
+    var date1=date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
+    if(assetinfoTime>date1)
+		message+="infoDate shouldn't execed today!";
+	
+	if(message!="")
+		alert(message);
+		return false;
+}
+</script>
+</head>
+
+<body>
+	<form name="sub_form" action="welcome.html" onsubmit="return validation()" method="post">
+            <table >
+                <tbody>
+                    <tr>
+                        <td>Brand：</td>
+                        <td ><!-- style="width: 290px; " -->
+                            <input type="text" name="assetBrand" value="" />*
+                        </td>
+                        <td>
+                            	Factory：
+                        </td>
+                        <td>
+                            <input type="text" name="assetfactoryId" value="" />*
+                        </td>
+                        
+                    </tr>                   
+                    <tr>
+                        <td>
+                            	Price：
+                        </td>
+                        <td>
+                            <input type="number" name="assetinfoPrice" value="" />*
+                        </td>
+                        <td class="label">
+                            	Purchaser：
+                        </td>
+                        <td>
+                            <input type="text" name="agentPurchaser" value="" />*
+                        </td>
+                        
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td >
+                            	madeDate：
+                        </td>
+                        <td>
+                        	<input type="date" name="assetmadeTime" value="" />*
+                        </td>
+                        <td>
+                            	project：
+                        </td>
+                        <td>
+                        	<input type="text" name="projectId" value="" />*
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            	startUseDate：
+                        </td>
+                        <td>
+                        	<input type="date" name="startUseTime" value="" />*
+                        </td>
+                        <td >
+                            	Version：
+                        </td>
+                        <td>
+                            <input type="text" name="assetinfoVersion" value="" />
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            	supplierEmail：
+                        </td>
+                        <td>
+                        	<input type="text" name="supplierEmail" value="" />
+                        </td>
+                        <td>
+                            	infoDate：
+                        </td>
+                        <td>
+                        	<input type="date" name="assetinfoTime" value="" />*
+                        </td>
+                        
+                    </tr>
+                    	
+                    <tr>
+                        <td colspan="4" align="center">
+	                       
+							<input type="submit" id="btnSave" value="Submit" />
+						    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+            </form>
+</body>
+</html>

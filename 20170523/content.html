@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-3.2.1.min.js" ></script>
+<script >
+	$(document).ready(function(e) {
+        $("#11").toggle();
+		$("#22").toggle();
+		$("#33").toggle();
+		$("#1").click(function(e){
+			$("#1").style.backgroundColor="red";
+			$("#11").toggle();
+		})
+		$("#2").click(function(e){
+			$("#22").toggle();
+		})
+		$("#3").click(function(e){
+			$("#33").toggle();
+		})
+    });
+</script>
+<style type="text/css">
+.content{
+	background-color:yellow;
+	height:50px;
+	
+}
+</style>
+</head>
+
+<body>
+	<p id="1" class="content">Content 1</p>
+    <p id="11">JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.</p>
+    <p id="2" class="content">Content 2</p>
+	<p id="22">JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.</p>
+    <p id="3" class="content">Content 3</p>
+    <p id="33">JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.</p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+In this homework, you have to create the View of your own Portfolio.  
+
+Examples
+
+1. https://www.w3schools.com/w3css/tryw3css_templates_portfolio.htm#portfolio
+
+2. https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm
+
+
+As you can see both these examples are simple yet elegant.
+
+
+Requirement:
+
+1. No Bootstrap, jQuery, JS. Only HTML5 and CSS!
+
+2. The .html and .css files should be easy to read (Indents)
+
+3. Your view should include menu navigation bar, images, etc.
+
+
+Score Evaluation:
+
+The score will be evaluated following criteria
+
+1. Style and colors are consistent
+
+2. Font size/spacing is easy to read (Adequate text-to-background contrast)
+
+3. Emphasis (bold, italics, etc.) is used sparingly
+
+4. Easy to follow contents

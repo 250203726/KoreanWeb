@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jquery</title>
+<script type="application/javascript" src="jquery-3.2.1.min.js" ></script>
+<script>
+	 $(document).ready(function () {
+        $("#in").click(function () {
+            $("h2").fadeIn();
+        });
+		$("#out").click(function () {
+            $("h2").fadeOut();
+        });
+    });
+
+</script>
+</head>
+
+<body>
+	<button id="in" value="" >FadeIn</button>
+    <button id="out" value="" >FadeOut</button>
+	<h2>
+Fade
+    </h2>
+	
+</body>
+</html>

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+nav {
+	background-color:red;
+	padding:10px 0;
+}
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+nav ul li {
+    display:inline-block;
+    position:relative;
+}
+/* sub navigation */
+nav li ul {    
+    background-color:red;
+    position:absolute;
+    left:0;
+    top:40px; 
+    width:200px;
+}
+nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+nav li li ul {
+    position:absolute;
+    top:0;
+    left:200px;
+    margin:0;
+}
+
+nav a {
+    line-height:40px;
+    padding:0 12px;
+    margin:0 12px;
+}
+nav a {
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+nav a:hover{
+    color:black;
+}
+
+nav li li a {
+   
+    margin:0 10px;
+    padding:0;
+}
+nav li li:last-child a {
+    border-bottom:none;
+}
+
+/* hide sub menu links */
+ul.sub-menu {
+   display:none;
+}

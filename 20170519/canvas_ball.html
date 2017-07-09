@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bouncing Ball Example</title>
+    <style>
+        canvas {
+            background: yellow;
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+	<script>
+	
+		document.addEventListener("keydown", keyDownHandler, false);
+		document.addEventListener("keyup", keyUpHandler, false);
+		
+		var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+		
+        var dx = 2;
+        var dy = 2;
+        var y = 100;
+        var x = 200;
+		var paddleHeight = 10;
+		var paddleWidth =100;
+		var paddleX = (canvas.width-paddleWidth)/2;
+		var rightPressed = false;
+		var leftPressed = false;
+		
+		function keyDownHandler(e) {
+			if(e.keyCode == 39) {
+				rightPressed = true;
+			}
+			else if(e.keyCode == 37) {
+				leftPressed = true;
+			}
+		}
+		function keyUpHandler(e) {
+			if(e.keyCode == 39) {
+				rightPressed = false;
+			}
+			else if(e.keyCode == 37) {
+				leftPressed = false;
+			}
+		}
+		
+		function drawPaddle() {
+			context.beginPath();
+			context.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+			context.fillStyle = "red";
+			context.fill();
+			context.closePath();
+		}
+		function drawBall() {
+			context.beginPath();
+            context.fillStyle = "red";
+            context.arc(x, y, 10, 0, Math.PI * 2, true);
+            context.closePath();
+            context.fill();
+			context.closePath();
+		}
+        function draw() {
+            context.clearRect(0, 0, 300, 200);
+            drawBall();
+			drawPaddle();
+            if (x < (0 + 10) || x > (300 - 10))
+                dx = -dx;
+            if (y < (0 + 10) || y > (200 - 10))
+                dy = -dy;
+			
+			if(rightPressed && paddleX < canvas.width-paddleWidth) {
+				paddleX += 3;
+			}
+			else if(leftPressed && paddleX > 0) {
+				paddleX -= 3;
+			}
+			
+			if(y>190){
+				if(x>(paddleX)&&(x<paddleX+100)){
+
+				}
+				else{
+					clearInterval(timer);
+					alert("Game over!");
+				}
+			}
+            
+			
+			x += dx;
+            y += dy;
+        }
+        var timer=setInterval(draw, 10);
+    </script>
+</body>
+</html>

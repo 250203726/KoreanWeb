@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BLOG</title>
+<style>
+	header{
+		border:1px solid black;
+		border-radius:40px;
+	}
+	header img#logo{
+		height:50px;
+		margin-left:50px;
+		margin-top:0px;
+		margin-right:10px;
+		float:left;
+	}
+	header ul#menu{
+		list-style:none;
+		
+		margin-right:0px;
+		padding-right:0px;
+	}
+	header ul#menu li{
+		display:inline;
+		padding:0 10px;		
+	}
+	header ul#menu li a{
+		text-decoration:none;
+		color:black;
+		font-weight:bold;
+		font-family:"Times New Roman",Georgia,Serif;
+	}
+	header ul#menu li a:hover{
+		text-decoration:none;
+		color:white;
+		background-color:black;
+		padding:20px 0px;
+		font-family:"Times New Roman",Georgia,Serif;
+	}
+	header ul#menu li#searchText{
+		float:right;
+		padding:0 5px;
+		height:30px;
+	}
+	header ul#menu li#searchButton{
+		float:right;
+		margin-right:50px;
+		padding:0px;
+	}
+	header ul#menu li#searchButton input{
+		width:88px;
+		height:30px;
+		border:0;
+		background-image:url(image/button.jpg);
+	}
+	nav{
+		background-color:yellow;
+		width:30%;
+		float:left;
+	}
+	#content{
+		width:70%;
+		float:right;
+	}
+	#title{
+		color:#FFCC00;
+		font-weight:bolder;
+		font-size:30px;
+		font-family:"Times New Roman",Georgia,Serif;
+	}
+	.article{
+		float:left;
+		padding:10px;
+	}
+	.article p{
+		font-weight:bold;
+		text-align:center;
+		font-family:"Times New Roman",Georgia,Serif;
+	}
+	.article img{
+		display:inline-block;
+		border:0;
+		width:180px;
+		height:240px;
+		position:relative;
+		-webkit-transition:all 200ms ease-in;
+		-webkit-transform:scale(1);
+		-moz-transition:all 200ms ease-in;
+		-moz-transform:scale(1);
+		-o-transition:all 200ms ease-in;
+		-o-transform:scale(1);
+		transition:all 200ms ease-in;
+		transform:scale(1);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.article img:hover{
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		z-index:2;
+		-webkit-transition:all 200ms ease-in;
+		-webkit-transform:scale(1.2);
+		-moz-transition:all 200ms ease-in;
+		-moz-transform:scale(1.2);
+		-o-transition:all 200ms ease-in;
+		-o-transform:scale(1.2);
+		transition:all 200ms ease-in;
+		transform:scale(1.2);
+	}
+	
+	footer{
+		border-top:aqua 1px solid;
+		width:100%;
+		height:50px;
+		clear:both;
+	}
+	footer p{
+		font-family:"Times New Roman",Georgia,Serif;
+		text-align:center;
+	}
+</style>
+</head>
+
+<body>
+	<!-- header -->
+	<header>
+		<img id="logo" src="image/logo.jpg" alt="logo" />
+		<ul id="menu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Coming Soon</a></li>
+			<li><a href="#">Booking</a></li>
+			<li><a href="#">Services</a></li>
+
+			<li id="searchButton"><input type="button"  /></li>
+			<li id="searchText"><input type="text" /></li>
+		</ul>
+	</header>
+	<!-- nav-->
+	<nav>
+	</nav>
+	<!-- content -->
+	<section id="content">
+		<div id="title">
+			On Air
+		</div>
+		<hr/>
+		<article class="article">		
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>			
+		</article>
+		<article class="article">			
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>			
+		</article>
+		<article class="article">			
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>			
+		</article>
+		<article class="article">			
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>			
+		</article>
+		<article class="article">			
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>			
+		</article>
+		<article class="article">		
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>		
+		</article>
+		<article class="article">
+			
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>		
+		</article>
+		<article class="article">
+
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>
+		</article>
+		<article class="article">
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>
+		</article>
+		<article class="article">
+			<img src="image/1.jpg"/>
+			<p>My First Movie </p>
+		</article>
+	</section>
+	<!-- footer -->
+	<footer>
+		<p>Power By Wang Hongzhou 2017
+		</p>
+	</footer>
+</body>
+</html>

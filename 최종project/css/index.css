@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/* header logo section css */
+.header{
+	background:url(../images/index/bg.jpg) no-repeat center top;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+	min-height: 770px;
+}
+.logo{
+	text-align: center;
+    margin-top: 25%;
+}
+.logo img{
+	max-width:61.8%;
+}
+.logo p{
+	color:#e67e22;
+	font-size:35px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+}
+@media only screen and (max-width: 767px){
+.logo{
+	margin-top:50%;
+}
+.logo p{
+	font-size:15px;
+}
+}
+
+/* information section start */
+.main{
+	/*padding:1em 0 15em;*/
+}
+.tit{
+	text-align: center;
+  	margin-bottom: 0;
+}
+.tit span{
+	display: block;
+	color: #4F6890;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+	margin: 0;
+  	padding: 25px 0;
+  	position: relative;
+  	text-transform: uppercase;
+}
+.tit span:after{
+	position: absolute;
+	width:32%;
+	height: 3px;
+	right:0%;
+	background: #4F6890;
+	content: '';
+  	bottom: 35px;
+}
+.tit span:before{
+	position: absolute;
+	width:32%;
+	height: 3px;
+	left:0%;
+	background: #4F6890;
+	content: '';
+  	bottom: 35px;
+}
+.picturebox, .memberbox{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+.picturecontent,.membercontent{
+	display: inline-block;
+	margin:0px 0px 7px 0px;
+	padding:0px;
+}
+.membercontent{
+	margin:0px 50px;
+}
+.membercontent img{
+	width:200px;
+}
+.picturecontent{
+	width: 24.6%;
+	min-width: 200px;
+}
+.picturecontent img {
+	width: 99%;
+	min-width: 200px;
+	max-width:290px;
+	cursor: pointer;
+	border-radius: 5px;
+	opacity:1;
+	transition: opacity 0.5s;
+}
+.picturecontent img:hover {
+	z-index:99999;
+	filter: brightness(70%) !important;
+	-webkit-filter: brightness(70%);
+	-moz-filter: brightness(70%);
+	-o-filter: brightness(70%);
+	-ms-filter: brightness(70%);
+	-webkit-transition:0.5s;
+	transition: 0.5s;
+	transition-timing-function: ease;
+	opacity:0.6;
+}
+/* informtion section end */
+

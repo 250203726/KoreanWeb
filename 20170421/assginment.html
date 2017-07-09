@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+		function check(){
+			var a=10;
+			
+			var x = document.getElementById("x").value;
+			var y=document.getElementById("y").value;
+            
+			if(x>a)
+				document.getElementById("z").value="High";
+			else if(x<a)
+				document.getElementById("z").value="Low";
+			else
+				document.getElementById("z").value="Right";
+				
+			document.getElementById("y").value=parseInt(y)+1;
+		}
+    </script>
+</head>
+<body>
+	<form>
+              
+        Number:<input type="text" id="x" /> <input type="button" value="check" onclick="check();" /><br />
+       
+        Guess Times:<input type="text" id="y" value="0" />
+		Status:<input type="text" readonly id="z" />
+		<br />
+   
+        
+       
+    </form>
+
+</body>
+</html>

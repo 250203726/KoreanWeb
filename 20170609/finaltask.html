@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	function getdata(button){
+		//alert(button.value);
+		$.post("http://203.255.71.173:8080/webclass/final.php",{
+			zodiac : button.value,
+		},
+		function(data,status){
+			var obj=JSON.parse(data);
+			$("#date").html(obj[0].date);
+			$("#content").html(obj[1].horoscope);
+		});			
+
+	}
+</script>
+<body>
+	<h2 id="date"></h2>
+    <p id="content"></p>
+    <input type="button" value="Aries" onClick="getdata(this);" />
+	<input type="button" value="Taurus" onClick="getdata(this);" />
+    <input type="button" value="Gemini" onClick="getdata(this);" />
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+        $("#send").click(function(){
+			var inName=$("#name").val();
+			var inHobby=$("#hobby").val();
+			$.post("http://203.255.71.173:8080/webclass/jquerypost.php",{
+				name:inName,
+				hobby:inHobby
+			},
+			function(data,status){
+				$("#result").text(data);
+			});			
+		})
+    });
+</script>
+</head>
+
+<body>
+	<p>Name:<input id="name" type="text" /></p>
+    <p>Hobby:<input id="hobby" type="text" /></p>
+    <input id="send" type="button" value="send data" />
+    <h1 id="result" ></h1>
+</body>
+</html>

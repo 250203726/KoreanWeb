@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+.schoolsbox{
+	margin-top:47px;
+}
+.schoolscontent{
+	margin:10px 0px;
+	background:#FFF;
+	border:1px solid #CCC;
+	padding:10px;
+}
+.title{
+	text-align:center;
+	margin:10px 0px;
+}
+.logo{
+	display: inline;
+	width:150px;
+	margin-bottom:10px;
+}
+.name{
+	display:block;
+	font-size:25px;
+	color:#4F6890;
+}
+.map{
+	float:right;
+	width:400px;
+	height:300px;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow:5px 5px 10px -1px #CCCCCC;
+	transition:all ease-in 0.3s;
+
+}
+.toggle{
+	display:none;
+}
+.info{
+	display: compact;
+	font-size:18px;
+	color:#999;
+	margin:10px 0px;
+}
+.btnfont{
+	font-size:18px;
+}
+@media only screen and (max-width: 767px){
+.map{
+	float:none;
+	width:100%;
+	transition:all ease-in 0.3s;
+}
+}

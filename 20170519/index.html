@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<canvas id="myCanvas" width="600" height="300" style="background: yellow;border: 1px dotted black;"></canvas>
+<input type="text" id="interval" value="100" />
+<input type="button" value="SetInter" onClick="SetInter();" />
+<input type="button" value="up" onClick="up();" />
+<input type="button" value="down" onClick="down();" />
+<script>
+	/*var canvas=document.getElementById("myCanvas");
+	var context=canvas.getContext("2d");
+		
+	context.beginPath();
+	context.moveTo(0, 0);
+	context.lineTo(100, 100);
+	context.lineTo(150, 50);
+	context.lineTo(200, 100);
+	context.stroke();*/
+		
+	/*var canvas = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+	
+	context.beginPath();
+	context.arc(100, 100, 80, 0, 2.0 * Math.PI, false);
+	context.strokeStyle = "red";
+	context.stroke();
+	
+	context.beginPath();
+	context.arc(100, 100, 60,0*Math.PI, 1.5* Math.PI);
+	context.closePath();
+	context.strokeStyle = "blue";
+	context.stroke();
+	
+	context.beginPath();
+	context.arc(100, 100, 40, 0, 1.5 * Math.PI, false);
+	context.strokeStyle = "green";
+	context.stroke();*/
+
+	/*	var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+
+    var gradient = context.createLinearGradient(0, 0, 200, 100);
+    gradient.addColorStop(0, "yellow");
+    gradient.addColorStop(0.5, "red");
+	gradient.addColorStop(1, "black");
+
+    context.fillStyle = gradient;
+    context.fillRect(10, 10, 300, 90);
+	*/
+	
+	var v;
+	var timer;
+    var dx1 = 10;
+    var dy1 = 8;
+    var y1 = 150;
+    var x1 = 300;
+		
+	var dx2 = -5;
+    var dy2 = 6;
+    var y2 = 50;
+    var x2 = 100;
+    function draw() {
+    	var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+		context.fillStyle="red";
+        context.clearRect(0, 0, 600, 300);
+        context.beginPath();
+        context.fillStyle = "aqua";
+        context.arc(x1, y1, 20, 0, Math.PI * 2, true);
+        context.closePath();
+        context.fill();
+        if (x1 < (0 + 20) || x1 > (600 - 20))
+        	dx1 = -dx1;
+        if (y1 < (0 + 20) || y1 > (300 - 20))
+        	dy1 = -dy1;
+        x1 += dx1;
+        y1 += dy1;
+			
+		context.beginPath();
+        context.fillStyle = "red";
+        context.arc(x2, y2, 20, 0, Math.PI * 2, true);
+        context.closePath();
+        context.fill();
+        if (x2 < (0 + 20) || x2 > (600 - 20))
+        	dx2 = -dx2;
+        if (y2 < (0 + 20) || y2 > (300 - 20))
+        	dy2 = -dy2;
+        x2 += dx2;
+        y2 += dy2;
+	}
+	
+	function SetInter(){
+		v=document.getElementById("interval").value;
+		timer=setInterval(draw, v);
+	}
+	function up(){
+		
+		clearInterval(timer);
+		v-=10;
+		timer=setInterval(draw, v);
+		
+	}
+	function down(){
+		
+		clearInterval(timer);
+		v+=10;
+		timer=setInterval(draw, v);
+	}
+		
+</script>
+</body>
+</html>
